@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 starter-kit
 ===========
 
@@ -34,3 +35,7 @@ Contact
 ====
 
 www.emberjs.com
+=======
+LunchHub
+========
+>>>>>>> 72e954ae49c99531ff855463924396d54ead255d
