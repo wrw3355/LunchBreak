@@ -17,6 +17,7 @@ Overview
     * Invitees
     
 * Features:
+    * Installation process to set up CouchDB / write config.js file
     * Countdown timer for upcoming events
     * Lock out votes within X time of event
     * Roles
