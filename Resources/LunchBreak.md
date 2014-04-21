@@ -39,7 +39,7 @@ Nice to have:
         Voting closes soon
         Voting has closed, where are we going
         You haven't voted yet
-        
+z    
 Invitee:
     UserId
     IsGoing
