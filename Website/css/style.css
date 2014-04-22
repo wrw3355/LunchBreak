@@ -10,8 +10,19 @@ body {
 }
 
 header {
-    /* background: linear-gradient(to bottom, deepskyblue, #0789d4); */
     border-bottom: 3px solid #017abf;
+}
+
+footer {
+    background: #333;
+    border-top: 3px solid #555;
+    color: #FFF;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+#title {
+    /* background: linear-gradient(to bottom, deepskyblue, #0789d4); */
     color: #333;
     text-shadow: 0 0 2px #AAA;
     height: 80px;
@@ -44,8 +55,10 @@ header {
 }
 
 .location {
+    border-top: 3px solid #E0E0E0;
     margin-top: 15px;
     margin-bottom: 15px;
+    padding: 25px;
 }
 
 .donotcare {
