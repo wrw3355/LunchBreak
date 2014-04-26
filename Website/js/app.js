@@ -8,7 +8,9 @@ App.Router.map(function() {
     this.resource("restaurant", function() {
         this.route("new");
     });
+    this.resource("events");
     this.resource("event", function() {
+        this.route(":event_id");
         this.route("new");
     });
 });
