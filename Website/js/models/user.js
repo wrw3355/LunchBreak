@@ -1,5 +1,5 @@
+var App = App || Ember.Application.create();
 App.User = DS.Model.extend({
-  id: DS.attr('string'),
   firstName: DS.attr('string'),
   lastName: DS.attr('string'),
   fullName: function() {

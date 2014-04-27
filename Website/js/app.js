@@ -1,4 +1,4 @@
-App = Ember.Application.create();
+var App = App || Ember.Application.create();
 
 App.Router.map(function() {
     this.resource("index", { path: "/" });
@@ -17,11 +17,12 @@ App.Router.map(function() {
 
 App.ApplicationAdapter = DS.FixtureAdapter.extend();
 
+
 App.IndexRoute = Ember.Route.extend({
   actions: {
   },
   model: function() {
-      return this.store.find('resturant');
+      return this.store.find('restaurant');
   }
 });
 
