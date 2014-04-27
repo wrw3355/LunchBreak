@@ -217,16 +217,17 @@
     </script>
     
     <script type="text/x-handlebars" data-template-name="components/record-table">
-        <table class="table table-hover table-condensed table-striped">
+        <table class="table table-hover table-condensed table-striped recordTable">
             <thead>
                 <tr>
                     <th>Name</th>
                     <th>Description</th>
                 </tr>
             </thead>
-            <tr>
+            {{#linkTo 'event' tagName='tr'}}
                 <td>Friday Lunch</td>
                 <td>Friday lunch a &quot;sit down&quot; restaurant.</td>
+            {{/linkTo}}
             </tr>
         </table>
     </script>
