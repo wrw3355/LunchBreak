@@ -17,12 +17,27 @@ App.Router.map(function() {
 
 App.ApplicationAdapter = DS.FixtureAdapter.extend();
 
-
 App.IndexRoute = Ember.Route.extend({
   actions: {
   },
   model: function() {
       return this.store.find('restaurant');
+  }
+});
+
+App.EventsRoute = Ember.Route.extend({
+  actions: {
+  },
+  model: function() {
+      return this.store.find('event');
+  }
+});
+
+App.EventRoute = Ember.Route.extend({
+  actions: {
+  },
+  model: function() {
+      return this.store.find('event');
   }
 });
 

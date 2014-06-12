@@ -53,7 +53,7 @@
     </script>
 
     <script type="text/x-handlebars" data-template-name="events">
-        {{record-table}}
+        {{record-table records=model}}
     </script>
 
     <script type="text/x-handlebars" data-template-name="event/new">
@@ -224,10 +224,12 @@
                     <th>Description</th>
                 </tr>
             </thead>
-            {{#linkTo 'event' tagName='tr'}}
-                <td>Friday Lunch</td>
-                <td>Friday lunch a &quot;sit down&quot; restaurant.</td>
-            {{/linkTo}}
+            {{#each record in records}}
+                {{#linkTo 'event' tagName='tr'}}
+                    <td>Friday Lunch</td>
+                    <td>Friday lunch a &quot;sit down&quot; restaurant.</td>
+                {{/linkTo}}
+            {{/each}}
             </tr>
         </table>
     </script>
