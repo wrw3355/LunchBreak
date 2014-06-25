@@ -7,7 +7,7 @@ App.Location = DS.Model.extend({
 
 App.Location.FIXTURES = [{
   id: 0,
-  name: "Victor",
+  name: "Victor, New York",
   description: "The Victor, New York area.",
   address: "Victor, NY"
 }];
