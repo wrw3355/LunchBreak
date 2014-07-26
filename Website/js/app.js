@@ -16,6 +16,11 @@ App.Router.map(function() {
       this.route("new");
     });
     this.resource("event", { "path": "/event/:event_id" });
+
+    this.resource("users", function() {
+      this.route("new");
+    });
+    this.resource("user", { "path": "/user/:user_id" });
 });
 
 App.ApplicationAdapter = DS.FixtureAdapter.extend();
@@ -41,6 +46,14 @@ App.EventRoute = Ember.Route.extend({
   },
   model: function(params) {
       return this.store.find('event', params.event_id);
+  }
+});
+
+App.EventRoute = Ember.Route.extend({
+  actions: {
+  },
+  model: function(params) {
+      return this.store.find('user', params.user_id);
   }
 });
 

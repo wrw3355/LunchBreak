@@ -2,13 +2,13 @@ var App = App || Ember.Application.create();
 App.Event = DS.Model.extend({
   title: DS.attr('string'),
   description: DS.attr('string'),
-  location: DS.belongsTo('location'),
+  location: DS.belongsTo('location', {async: true}),
   whenDate: DS.attr('date'),
   recurring: DS.attr('boolean'),
   frequency: DS.attr('string'),
-  restaurants: DS.hasMany('restaurant'),
+  restaurants: DS.hasMany('restaurant', {async: true}),
   public: DS.attr('boolean'),
-  invitees: DS.attr('user')
+  invitees: DS.hasMany('user', {async: true})
 });
 
 App.Event.FIXTURES = [
