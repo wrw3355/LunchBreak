@@ -9,8 +9,7 @@ App.Router.map(function() {
         this.route("new");
     });
     this.resource("events");
-    this.resource("event", function() {
-        this.route(":event_id");
+    this.resource("event", { "path": "/event/:event_id" }, function() {
         this.route("new");
     });
 });
@@ -36,8 +35,8 @@ App.EventsRoute = Ember.Route.extend({
 App.EventRoute = Ember.Route.extend({
   actions: {
   },
-  model: function() {
-      return this.store.find('event');
+  model: function(params) {
+      return this.store.find('event', params.event_id);
   }
 });
 
