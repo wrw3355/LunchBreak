@@ -33,29 +33,25 @@
         <h2>Events</h2>
         <ul>
             <li>{{#link-to 'events'}}View List{{/link-to}}</li>
-            <li>{{#link-to 'event.new'}}Create{{/link-to}}</li>
+            <li>{{#link-to 'events.new'}}Create{{/link-to}}</li>
         </ul>
         
         <h2>Locations</h2>
         <ul>
             <li>View List</li>
             <li>View Location</li>
-            <li>{{#link-to 'location.new'}}Create{{/link-to}}</li>
+            <li>{{#link-to 'locations.new'}}Create{{/link-to}}</li>
         </ul>
         
         <h2>Restaurants</h2>
         <ul>
             <li>View List</li>
             <li>View Restaurant</li>
-            <li>{{#link-to 'restaurant.new'}}Create{{/link-to}}</li>
+            <li>{{#link-to 'restaurants.new'}}Create{{/link-to}}</li>
         </ul>
     </script>
 
-    <script type="text/x-handlebars" data-template-name="events">
-        {{record-table records=model}}
-    </script>
-
-    <script type="text/x-handlebars" data-template-name="event/new">
+    <script type="text/x-handlebars" data-template-name="events/new">
         <h1>
             Create an event
         </h1>
@@ -118,7 +114,11 @@
             <button type="submit" class="btn btn-default">Submit</button>
         </form>
     </script>
-    
+
+    <script type="text/x-handlebars" data-template-name="events/index">
+        {{record-table records=model}}
+    </script>
+
     <script type="text/x-handlebars" id="event">
         <div class="row">
             <div class="col-xs-12 information">
@@ -140,7 +140,7 @@
         {{/each}}
     </script>
     
-    <script type="text/x-handlebars" data-template-name="location/new">
+    <script type="text/x-handlebars" data-template-name="locations/new">
         <h1>
             New location
         </h1>
@@ -161,7 +161,7 @@
         </form>
     </script>
     
-    <script type="text/x-handlebars" data-template-name="restaurant/new">
+    <script type="text/x-handlebars" data-template-name="restaurants/new">
         <h1>
             New restaurant
         </h1>

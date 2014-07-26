@@ -2,16 +2,20 @@ var App = App || Ember.Application.create();
 
 App.Router.map(function() {
     this.resource("index", { path: "/" });
-    this.resource("location", function() {
+    this.resource("locations", function() {
         this.route("new");
     });
-    this.resource("restaurant", function() {
+    this.resource("location", { "path": "/location/:location_id" });
+
+    this.resource("restaurants", function() {
         this.route("new");
     });
-    this.resource("events");
-    this.resource("event", { "path": "/event/:event_id" }, function() {
-        this.route("new");
+    this.resource("restaurant", { "path": "/restaurant/:restaurant_id" });
+
+    this.resource("events", function() {
+      this.route("new");
     });
+    this.resource("event", { "path": "/event/:event_id" });
 });
 
 App.ApplicationAdapter = DS.FixtureAdapter.extend();
