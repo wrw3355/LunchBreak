@@ -204,20 +204,28 @@
                     Votes: 3
                 </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-3">
                 <h3>{{loc.name}}</h3>
                 <p>{{loc.description}}</p>
                 <div class="buttonArea">
                     <button class="btn btn-default menuButton" {{action "showMenu" loc.menu}}>Menu</button>
-                    <button class="btn btn-default mapButton">Map</button>
                     <div class="voteArea">
                         <button class="btn btn-primary vote">Vote</button>
                     </div>
                 </div>
             </div>
+            <div class="col-md-6">
+                {{google-map place=loc}}
+            </div>
         </div>
     </script>
     
+    <script type="text/x-handlebars" data-template-name="components/google-map">
+        {{#if place.address}}
+            <iframe width="430" height="300" frameborder="0" {{bind-attr src="href"}} class="googleMap"></iframe>
+        {{/if}}
+    </script>
+
     <script type="text/x-handlebars" data-template-name="components/record-table">
         <table class="table table-hover table-condensed table-striped recordTable">
             <thead>

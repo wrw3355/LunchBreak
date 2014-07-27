@@ -42,17 +42,12 @@ footer {
     color: #FFF;
 }
 
-.vote {
-    margin: 10px 0;
+.menuButton, .vote {
     width: 100%;
 }
 
-.menuButton, .mapButton {
-    width: 49%;
-}
-
-.buttonArea {
-    width: 200px;
+.vote {
+    margin: 10px 0;
 }
 
 .location {
@@ -81,4 +76,8 @@ footer {
 
 .recordTable tbody tr {
     cursor: pointer;
+}
+
+.googleMap {
+    margin: 0 auto;
 }

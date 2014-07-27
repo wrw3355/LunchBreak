@@ -64,3 +64,9 @@ App.LocationBlockComponent = Ember.Component.extend({
     }
   }
 });
+
+App.GoogleMapComponent = Ember.Component.extend({
+  href: function() {
+    return "https://www.google.com/maps/embed/v1/place?key=AIzaSyB17-nqo0YY71URBunoRlndEV5VkcfG1Js&q=" + this.place.get("address");
+  }.property("place")
+});
