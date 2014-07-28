@@ -60,6 +60,9 @@ App.RestaurantsRoute = Ember.Route.extend({
 
 App.RestaurantRoute = Ember.Route.extend({
   actions: {
+    showMenu: function(menuUrl) {
+        window.open(menuUrl, "_blank");
+    }
   },
   model: function(params) {
       return this.store.find('restaurant', params.restaurant_id);
