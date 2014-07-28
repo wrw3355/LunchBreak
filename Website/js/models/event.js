@@ -1,6 +1,6 @@
 var App = App || Ember.Application.create();
 App.Event = DS.Model.extend({
-  title: DS.attr('string'),
+  name: DS.attr('string'),
   description: DS.attr('string'),
   location: DS.belongsTo('location', {async: true}),
   whenDate: DS.attr('date'),
@@ -14,7 +14,7 @@ App.Event = DS.Model.extend({
 App.Event.FIXTURES = [
   {
       id: 0,
-      title: "Fancy Friday",
+      name: "Fancy Friday",
       description: "Lunch at a sit down restaurant.",
       location: 0,
       whenDate: new Date(2014, 5, 11, 11, 45, 0, 0),
@@ -26,7 +26,7 @@ App.Event.FIXTURES = [
   },
   {
       id: 1,
-      title: "Monday Dinner",
+      name: "Monday Dinner",
       description: "No, really, who goes out on Mondays?",
       location: 0,
       whenDate: new Date(2014, 5, 11, 11, 45, 0, 0),
