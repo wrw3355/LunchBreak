@@ -25,16 +25,12 @@ App.Router.map(function() {
 
 App.ApplicationAdapter = DS.FixtureAdapter.extend();
 
-App.IndexRoute = Ember.Route.extend({
-  actions: {
-  },
-  model: function() {
-      return this.store.find('restaurant');
-  }
-});
-
+// Event routes
 App.EventsRoute = Ember.Route.extend({
   actions: {
+    transitionToRecord: function(type, record) {
+      this.transitionTo(type, record);
+    }
   },
   model: function() {
       return this.store.find('event');
@@ -49,11 +45,53 @@ App.EventRoute = Ember.Route.extend({
   }
 });
 
-App.EventRoute = Ember.Route.extend({
+
+// Restaurant routes
+App.RestaurantsRoute = Ember.Route.extend({
+  actions: {
+    transitionToRecord: function(type, record) {
+      this.transitionTo(type, record);
+    }
+  },
+  model: function() {
+      return this.store.find('restaurant');
+  }
+});
+
+App.RestaurantRoute = Ember.Route.extend({
   actions: {
   },
   model: function(params) {
-      return this.store.find('user', params.user_id);
+      return this.store.find('location', params.event_id);
+  }
+});
+
+// Location routes
+App.LocationsRoute = Ember.Route.extend({
+  actions: {
+    transitionToRecord: function(type, record) {
+      this.transitionTo(type, record);
+    }
+  },
+  model: function() {
+      return this.store.find('location');
+  }
+});
+
+App.LocationRoute = Ember.Route.extend({
+  actions: {
+  },
+  model: function(params) {
+      return this.store.find('location', params.event_id);
+  }
+});
+
+// Components
+App.RecordTableComponent = Ember.Component.extend({
+  actions: {
+    select: function(record) {
+      this.sendAction("transition", record.get("constructor.typeKey"), record);
+    }
   }
 });
 

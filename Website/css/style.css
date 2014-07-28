@@ -31,6 +31,10 @@ footer {
     font-size: 45px;
 }
 
+#descriptionTextArea {
+    height: 70px;
+}
+
 .information {
     background: linear-gradient(to bottom, #0789d4, #1ca9f9);
     border-bottom: 3px solid #017abf;

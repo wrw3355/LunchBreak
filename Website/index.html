@@ -38,15 +38,13 @@
         
         <h2>Locations</h2>
         <ul>
-            <li>View List</li>
-            <li>View Location</li>
+            <li>{{#link-to 'locations'}}View List{{/link-to}}</li>
             <li>{{#link-to 'locations.new'}}Create{{/link-to}}</li>
         </ul>
         
         <h2>Restaurants</h2>
         <ul>
-            <li>View List</li>
-            <li>View Restaurant</li>
+            <li>{{#link-to 'restaurants'}}View List{{/link-to}}</li>
             <li>{{#link-to 'restaurants.new'}}Create{{/link-to}}</li>
         </ul>
     </script>
@@ -116,7 +114,8 @@
     </script>
 
     <script type="text/x-handlebars" data-template-name="events/index">
-        {{record-table records=model}}
+        <h1>Events</h1>
+        {{record-table records=model transition="transitionToRecord"}}
     </script>
 
     <script type="text/x-handlebars" id="event">
@@ -143,6 +142,11 @@
         {{/each}}
     </script>
     
+    <script type="text/x-handlebars" data-template-name="locations/index">
+        <h1>Locations</h1>
+        {{record-table records=model transition="transitionToRecord"}}
+    </script>
+
     <script type="text/x-handlebars" data-template-name="locations/new">
         <h1>
             New location
@@ -164,6 +168,11 @@
         </form>
     </script>
     
+    <script type="text/x-handlebars" data-template-name="restaurants/index">
+        <h1>Restaurants</h1>
+        {{record-table records=model transition="transitionToRecord"}}
+    </script>
+
     <script type="text/x-handlebars" data-template-name="restaurants/new">
         <h1>
             New restaurant
@@ -236,10 +245,10 @@
             </thead>
             <tbody>
                 {{#each record in records}}
-                    {{#link-to 'event' record tagName="tr"}}
-                        <td>{{record.title}}</td>
+                    <tr {{action "select" record on="mouseUp"}}>
+                        <td>{{record.name}}</td>
                         <td>{{record.description}}</td>
-                    {{/link-to}}
+                    </tr>
                 {{/each}}
             </tbody>
         </table>
