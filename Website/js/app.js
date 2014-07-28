@@ -62,7 +62,7 @@ App.RestaurantRoute = Ember.Route.extend({
   actions: {
   },
   model: function(params) {
-      return this.store.find('location', params.event_id);
+      return this.store.find('restaurant', params.restaurant_id);
   }
 });
 
@@ -82,7 +82,7 @@ App.LocationRoute = Ember.Route.extend({
   actions: {
   },
   model: function(params) {
-      return this.store.find('location', params.event_id);
+      return this.store.find('location', params.location_id);
   }
 });
 
