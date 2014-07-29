@@ -31,6 +31,11 @@ footer {
     font-size: 45px;
 }
 
+#title a, #title a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
 #descriptionTextArea {
     height: 70px;
 }
