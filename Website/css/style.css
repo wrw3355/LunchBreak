@@ -47,8 +47,16 @@ footer {
     padding-bottom: 20px;
 }
 
-.information h2 {
+.location, .restaurant {
+    margin-bottom: 20px;
+}
+
+.information h2, .information h1 {
     color: #FFF;
+}
+
+.information .menuButton {
+    width: 200px;
 }
 
 .menuButton, .vote {
@@ -59,7 +67,7 @@ footer {
     margin: 10px 0;
 }
 
-.location {
+.locationBlock {
     border-top: 3px solid #E0E0E0;
     margin-top: 15px;
     margin-bottom: 15px;
