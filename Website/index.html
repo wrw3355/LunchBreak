@@ -115,7 +115,7 @@
 
     <script type="text/x-handlebars" data-template-name="events/index">
         <h1>Events</h1>
-        {{record-table records=model transition="transitionToRecord"}}
+        {{record-table records=model transitionToRecord="transitionToRecord" createRecord="createRecord"}}
     </script>
 
     <script type="text/x-handlebars" id="event">
@@ -144,7 +144,7 @@
     
     <script type="text/x-handlebars" data-template-name="locations/index">
         <h1>Locations</h1>
-        {{record-table records=model transition="transitionToRecord"}}
+        {{record-table records=model transitionToRecord="transitionToRecord" createRecord="createRecord"}}
     </script>
 
     <script type="text/x-handlebars" data-template-name="locations/new">
@@ -185,7 +185,7 @@
     
     <script type="text/x-handlebars" data-template-name="restaurants/index">
         <h1>Restaurants</h1>
-        {{record-table records=model transition="transitionToRecord"}}
+        {{record-table records=model transitionToRecord="transitionToRecord" createRecord="createRecord"}}
     </script>
 
     <script type="text/x-handlebars" data-template-name="restaurants/new">
@@ -272,6 +272,9 @@
     </script>
 
     <script type="text/x-handlebars" data-template-name="components/record-table">
+        <div class="actionButtons">
+            <button class="createButton" {{action "createRecord"}} >Create</button>
+        </div>
         <table class="table table-hover table-condensed table-striped recordTable">
             <thead>
                 <tr>

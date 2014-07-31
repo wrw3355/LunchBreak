@@ -30,6 +30,9 @@ App.EventsRoute = Ember.Route.extend({
   actions: {
     transitionToRecord: function(type, record) {
       this.transitionTo(type, record);
+    },
+    createRecord: function() {
+      this.transitionTo("events.new");
     }
   },
   model: function() {
@@ -51,6 +54,9 @@ App.RestaurantsRoute = Ember.Route.extend({
   actions: {
     transitionToRecord: function(type, record) {
       this.transitionTo(type, record);
+    },
+    createRecord: function(type) {
+      this.transitionTo("restaurants.new");
     }
   },
   model: function() {
@@ -71,6 +77,9 @@ App.LocationsRoute = Ember.Route.extend({
   actions: {
     transitionToRecord: function(type, record) {
       this.transitionTo(type, record);
+    },
+    createRecord: function() {
+      this.transitionTo("locations.new");
     }
   },
   model: function() {
@@ -90,7 +99,10 @@ App.LocationRoute = Ember.Route.extend({
 App.RecordTableComponent = Ember.Component.extend({
   actions: {
     select: function(record) {
-      this.sendAction("transition", record.get("constructor.typeKey"), record);
+      this.sendAction("transitionToRecord", record.get("constructor.typeKey"), record);
+    },
+    createRecord: function() {
+      this.sendAction("createRecord");
     }
   }
 });
