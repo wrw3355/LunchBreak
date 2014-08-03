@@ -124,9 +124,11 @@ footer {
 
 .pal-label {
     border: 1px solid #45A1DC;
+    font-size: 15px;
     height: 30px;
+    letter-spacing: 1.2px;
     margin: 20px auto 0;
-    width: 100px;
+    width: 112px;
 }
 
 .pal-name {
@@ -146,18 +148,27 @@ footer {
     float: left;
     height: 28px;
     padding-top: 4px;
-    width: 49px;
+    width: 55px;
 }
 
+.pal-eye-socket {
+    background: #666 linear-gradient(to bottom, #CCC, #0E0D0D);
+    border: 1px solid #242424;
+    border-radius: 118px;
+    box-shadow: 0 0 6px #3C3C3C;
+    height: 118px;
+    margin: 140px auto 0;
+    padding: 4px;
+    width: 118px;
+}
 .pal-eye {
-    background: radial-gradient(circle closest-side, #F00,#000);
-    width: 110px;
-    height: 110px;
-    margin: 0px auto;
-    border: 2px solid #999;
+    background: radial-gradient(40px, #9CAA00 0%, #F00 24%,#000 108%);
+    border: 2px solid #727272;
     border-radius: 110px;
     box-shadow: 0 0 6px #666;
-    margin-top: 140px;
+    margin: 0px auto;
+    height: 110px;
+    width: 110px;
 }
 
 .pal-bottom {
