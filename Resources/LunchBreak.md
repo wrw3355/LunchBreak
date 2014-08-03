@@ -1,21 +1,33 @@
-Locations -> Resturants
+Locations -> restaurants
 
 Overview
 ----------
+* Dashboard page
+    * Quick view of events
+    * Quick links
+        * New event
+        * My restaurants
+        * Event invites (not accepted)
+        * Upcoming events
+    * My week overview
+    * Metro style
 * Resturants
     * Pictures
     * Menu Link
-    * Map To (Address)
+    * Map (Address)
 
 * Polls
-    * Pick which resturant
+    * Pick which restaurant
     * 1 vote per user per "event"
-    
 * Events
     * DateTime
     * Location
     * Invitees
-    
+    * Invitee options:
+        * Attend
+        * Decline
+    * Voting
+        * I don't care option
 * Features:
     * Installation process to set up CouchDB / write config.js file
     * Countdown timer for upcoming events
@@ -28,13 +40,11 @@ Overview
     * User profiles
         * Avatar
         * Favorites
-    
 * Nice to have:
-    * "I don't care option"
     * Step by step guide
     * Saved groups of users
     * UI Customization
-    * Reviews of resturants
+    * Reviews of restaurants
         * Speed
         * Price
         * Overall
@@ -48,15 +58,13 @@ Overview
     * IsGoing
     * VoteChoice (?)
     * HasVoted
-        
-Views
+    Views
 ----------
 * Add / Modify Location
     * Name
     * Description
     * Map(?)
-    
-    * Add / Modify Resturants
+    * Add / Modify restaurants
         * Name
         * Description
         * Picture
@@ -71,4 +79,3 @@ Views
 * View Event
     * Are you going?
     * Vote
-        
