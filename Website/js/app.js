@@ -21,6 +21,8 @@ App.Router.map(function() {
       this.route("new");
     });
     this.resource("user", { "path": "/user/:user_id" });
+
+    this.route("fourOhFour", { "path": "*path" });
 });
 
 App.ApplicationAdapter = DS.FixtureAdapter.extend();

@@ -108,3 +108,65 @@ footer {
     float: right;
     padding: 5px 5px 5px 24px;
 }
+
+/* 404 page styles */
+.pal {
+    margin: 15px auto;
+    width: 154px;
+}
+
+.pal-panel {
+    background: linear-gradient(to bottom, #333, #121212);
+    height: 334px;
+    border: 2px solid #666;
+    margin: 15px auto 0;
+}
+
+.pal-label {
+    border: 1px solid #45A1DC;
+    height: 30px;
+    margin: 20px auto 0;
+    width: 100px;
+}
+
+.pal-name {
+    background: #45A1DC;
+    border-right: 1px solid #45A1DC;
+    text-align: right;
+    padding-right: 4px;
+}
+
+.pal-version {
+    text-align: left;
+    padding-left: 4px;
+}
+
+.pal-name, .pal-version {
+    color: #FFF;
+    float: left;
+    height: 28px;
+    padding-top: 4px;
+    width: 49px;
+}
+
+.pal-eye {
+    background: radial-gradient(circle closest-side, #F00,#000);
+    width: 110px;
+    height: 110px;
+    margin: 0px auto;
+    border: 2px solid #999;
+    border-radius: 110px;
+    box-shadow: 0 0 6px #666;
+    margin-top: 140px;
+}
+
+.pal-bottom {
+    background: #333 url(../img/404/pal-bottom.png) 0px 1px;
+    height: 103px;
+    border: 2px solid #666;
+    border-top: 0
+}
+
+.errorContainer {
+    text-align: center;
+}
