@@ -97,6 +97,7 @@ footer {
 }
 
 .googleMap {
+    display: block;
     margin: 0 auto;
 }
 
