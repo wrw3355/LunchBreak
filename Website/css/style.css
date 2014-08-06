@@ -113,6 +113,13 @@ footer {
     background: #EAEAEA url(../img/icons/plus.png) no-repeat;
 }
 
+.editButton {
+    background: #EAEAEA url(../img/icons/pencil.png) no-repeat;
+}
+
+.adminRow {
+}
+
 /* 404 page styles */
 .pal {
     margin: 15px auto;

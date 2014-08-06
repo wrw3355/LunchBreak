@@ -139,16 +139,29 @@
     <script type="text/x-handlebars" id="event">
         <div class="row">
             <div class="col-xs-12 information event">
-                <h2>{{name}}</h2>
-                <p>{{description}}</p>
-                <div class="where"><label>Where:</label> {{location.name}}</div>
-                <div class="invitees"><label>Invitees:</label>
-                    {{#each invitee in invitees}}
-                        <span>{{invitee.fullName}}</span>
-                    {{/each}}
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>{{name}}</h2>
+                    </div>
                 </div>
-                <button class="btn btn-success">Count me in</button>
-                <button class="btn btn-danger">Maybe next time</button>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>{{description}}</p>
+                        <div class="where"><label>Where:</label> {{location.name}}</div>
+                        <div class="invitees"><label>Invitees:</label>
+                            {{#each invitee in invitees}}
+                                <span>{{invitee.fullName}}</span>
+                            {{/each}}
+                        </div>
+                        <button class="btn btn-success">Count me in</button>
+                        <button class="btn btn-danger">Maybe next time</button>
+                    </div>
+                </div>
+                <div class="row adminRow">
+                    <div class="col-xs-12">
+                        <button class="iconButton editButton" {{action "editRecord"}}>Edit</button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -189,10 +202,21 @@
     <script type="text/x-handlebars" data-template-name="location">
         <div class="row">
             <div class="col-xs-12 information location">
-                <h1>{{name}}</h1>
-                <div class="col-md-6">
-                    <p>{{description}}</p>
-                    <p>{{address}}</p>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>{{name}}</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>{{description}}</p>
+                        <p>{{address}}</p>
+                    </div>
+                </div>
+                <div class="row adminRow">
+                    <div class="col-xs-12">
+                        <button class="iconButton editButton" {{action "editRecord"}}>Edit</button>
+                    </div>
                 </div>
             </div>
             <div class="col-md-12">
@@ -239,15 +263,26 @@
     <script type="text/x-handlebars" data-template-name="restaurant">
         <div class="row">
             <div class="col-xs-12 information restaurant">
-                <h1>{{name}}</h1>
-                <div class="col-md-2">
-                    <img {{bind-attr src="img" alt="name"}} class="previewImage" />
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>{{name}}</h1>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <p>{{description}}</p>
-                    <p>{{location.address}}</p>
-                    <div class="buttonArea">
-                        <button class="btn btn-default menuButton" {{action "showMenu" loc.menu}}>Menu</button>
+                <div class="row">
+                    <div class="col-md-2">
+                        <img {{bind-attr src="img" alt="name"}} class="previewImage" />
+                    </div>
+                    <div class="col-md-4">
+                        <p>{{description}}</p>
+                        <p>{{location.address}}</p>
+                        <div class="buttonArea">
+                            <button class="btn btn-default menuButton" {{action "showMenu" loc.menu}}>Menu</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button class="iconButton editButton" {{action "editRecord"}}>Edit</button>
                     </div>
                 </div>
             </div>
