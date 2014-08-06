@@ -101,13 +101,16 @@ footer {
     margin: 0 auto;
 }
 
-.createButton {
-    background: #EAEAEA url(../img/icons/plus.png) no-repeat;
+.iconButton {
     border: 1px solid #CCC;
     border-radius: 3px;
     cursor: pointer;
     float: right;
     padding: 5px 5px 5px 24px;
+}
+
+.createButton {
+    background: #EAEAEA url(../img/icons/plus.png) no-repeat;
 }
 
 /* 404 page styles */
