@@ -16,19 +16,18 @@
         {{outlet}}
         <footer class="row">&copy 2014</footer>
     </script>
-    
-    
+
     <script type="text/x-handlebars" id="index">
         <h2>Events</h2>
         <ul>
             <li>{{#link-to 'events'}}View List{{/link-to}}</li>
         </ul>
-        
+
         <h2>Locations</h2>
         <ul>
             <li>{{#link-to 'locations'}}View List{{/link-to}}</li>
         </ul>
-        
+
         <h2>Restaurants</h2>
         <ul>
             <li>{{#link-to 'restaurants'}}View List{{/link-to}}</li>
@@ -161,7 +160,7 @@
             {{location-block loc=restaurant}}
         {{/each}}
     </script>
-    
+
     <script type="text/x-handlebars" data-template-name="locations/index">
         <h1>Locations</h1>
         {{record-table records=model transitionToRecord="transitionToRecord" createRecord="createRecord"}}
@@ -213,7 +212,7 @@
             </div>
         </div>
     </script>
-    
+
     <script type="text/x-handlebars" data-template-name="restaurants/index">
         <h1>Restaurants</h1>
         {{record-table records=model transitionToRecord="transitionToRecord" createRecord="createRecord"}}
@@ -280,7 +279,7 @@
             </div>
         </div>
     </script>
-    
+
     <script type="text/x-handlebars" data-template-name="components/location-block">
         <div class="locationBlock row">
             <div class="col-md-2 col-md-offset-1 previewArea">
@@ -306,7 +305,7 @@
             </div>
         </div>
     </script>
-    
+
     <script type="text/x-handlebars" data-template-name="components/google-map">
         {{#if place.address}}
             <iframe width="430" height="300" frameborder="0" {{bind-attr src="href"}} class="googleMap"></iframe>
