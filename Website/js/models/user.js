@@ -7,7 +7,6 @@ App.User = DS.Model.extend({
   }.property('firstName', 'lastName'),
 
   userName: DS.attr('string'),
-  description: DS.attr('string'),
   avatar: DS.attr('string')
   // role: DS.attr('role') -- TODO
 });
@@ -17,6 +16,5 @@ App.User.FIXTURES = [{
   firstName: "William",
   lastName: "Wenzel",
   userName: "wwenzel",
-  description: "Blah blah blah",
   avatar: ""
 }];
