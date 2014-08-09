@@ -119,6 +119,70 @@
         </form>
     </script>
 
+    <script type="text/x-handlebars" data-template-name="event/edit">
+        <h1>
+            Create an event
+        </h1>
+        <form role="form">
+            <div class="form-group">
+                <label for="titleInput">Title:</label>
+                <input type="text" class="form-control" id="titleInput" placeholder="Friday Lunch">
+            </div>
+            <div class="form-group">
+                <label for="descriptionTextArea">Description</label>
+                <textarea class="form-control" id="descriptionTextArea"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="locationLookup">Location:</label>
+                <input type="text" class="form-control" id="locationLookup" placeholder="Victor->">
+            </div>
+            <div class="form-group">
+                <label for="whenDate">When:</label>
+                <input type="text" class="form-control" id="whenDate" placeholder="Jim D->">
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <label>
+                        <input type="checkbox"> Recurring
+                    </label>
+                </div>
+                <div class="col-md-9">
+                    <div class="form-group">
+                        <label for="frequencySelect">Frequency:</label>
+                        <select class="form-control" id="frequencySelect">
+                            <option value="weekly">Weekly</option>
+                            <option value="biweekly">Biweekly</option>
+                            <option value="monthly">Monthly</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="restaurantLookup">Restaurants:</label>
+                <input type="text" class="form-control" id="restaurantLookup" placeholder="Chilis->">
+                <div id="restaurantList">
+                </div>
+            </div>
+            <div class="form-group">
+                <fieldset>
+                    <legend>Privacy:</legend>
+                    <input type="radio" name="privacy" id="publicRadio" value="Public" checked>
+                    <label for="privacyRadio">Public</label>
+                    <input type="radio" name="privacy" id="privacyRadio" value="Private">
+                    <label for="privacyRadio">Private</label>
+                    <p class="help-block">Anyone can access public events. Only invitees can access private events.</p>
+                </fieldset>
+            </div>
+            <div class="form-group">
+                <label for="userLookup">Invitees:</label>
+                <input type="text" class="form-control" id="userLookup" placeholder="Jim D->">
+                <div id="restaurantList">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </script>
+
     <script type="text/x-handlebars" data-template-name="events/index">
         <h1>Events</h1>
         {{record-table records=model transitionToRecord="transitionToRecord" createRecord="createRecord"}}
@@ -187,6 +251,27 @@
         </form>
     </script>
 
+    <script type="text/x-handlebars" data-template-name="location/edit">
+        <h1>
+            New location
+        </h1>
+        <form role="form">
+            <div class="form-group">
+                <label for="nameInput">Name:</label>
+                <input type="text" class="form-control" id="nameInput" placeholder="Victor">
+            </div>
+            <div class="form-group">
+                <label for="descriptionTextArea">Description</label>
+                <textarea class="form-control" id="descriptionTextArea"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="addressInput">Map Location:</label>
+                <input type="text" class="form-control" id="addressInput" placeholder="Victor, NY 14564">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </script>
+
     <script type="text/x-handlebars" data-template-name="location">
         <div class="row">
             <div class="col-xs-12 information location">
@@ -219,6 +304,36 @@
     </script>
 
     <script type="text/x-handlebars" data-template-name="restaurants/new">
+        <h1>
+            New restaurant
+        </h1>
+        <form role="form">
+            <div class="form-group">
+                <label for="nameInput">Name:</label>
+                <input type="text" class="form-control" id="nameInput" placeholder="Restaurant">
+            </div>
+            <div class="form-group">
+                <label for="descriptionTextArea">Description</label>
+                <textarea class="form-control" id="descriptionTextArea"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="previewImageFile">Preview Image</label>
+                <input type="file" id="previewImageFile">
+                <p class="help-block">A restaurant logo or a picture of the restaurant, for example.</p>
+            </div>
+            <div class="form-group">
+                <label for="menuInput">Menu Link:</label>
+                <input type="text" class="form-control" id="menuInput" placeholder="http://chilis.com/">
+            </div>
+            <div class="form-group">
+                <label for="addressInput">Address:</label>
+                <input type="text" class="form-control" id="addressInput" placeholder="7491 Pittsford Victor Rd, Victor, NY 14564">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="restaurant/edit">
         <h1>
             New restaurant
         </h1>

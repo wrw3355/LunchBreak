@@ -4,23 +4,32 @@ App.Router.map(function() {
     this.resource("index", { path: "/" });
     this.resource("locations", function() {
         this.route("new");
+        this.route("edit");
     });
-    this.resource("location", { "path": "/location/:location_id" });
+    this.resource("location", { "path": "/location/:location_id" }, function() {
+      this.route("edit");
+    });
 
     this.resource("restaurants", function() {
         this.route("new");
     });
-    this.resource("restaurant", { "path": "/restaurant/:restaurant_id" });
+    this.resource("restaurant", { "path": "/restaurant/:restaurant_id" }, function() {
+      this.route("edit");
+    });
 
     this.resource("events", function() {
       this.route("new");
     });
-    this.resource("event", { "path": "/event/:event_id" });
+    this.resource("event", { "path": "/event/:event_id" }, funciton () {
+      this.route("edit");
+    });
 
     this.resource("users", function() {
       this.route("new");
     });
-    this.resource("user", { "path": "/user/:user_id" });
+    this.resource("user", { "path": "/user/:user_id" }, function() {
+      this.route("edit");
+    });
 
     this.route("fourOhFour", { "path": "*path" });
 });
